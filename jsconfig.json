@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",             // ✅ Required
+    "moduleResolution": "NodeNext",   // ✅ Matching resolution
+    "target": "ES2021",
+    "checkJs": true,
+    "allowJs": true
+  }
+}
