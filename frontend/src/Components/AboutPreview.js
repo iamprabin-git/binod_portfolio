@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function AboutPreview() {
   return (
-    <section className="py-16 bg-white dark:bg-gray-900">
+    <section className="py-6 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
