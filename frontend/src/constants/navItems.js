@@ -1,27 +1,16 @@
+// constants/navItems.js
+import {
+  HOME_ROUTE,
+  ABOUT_ROUTE,
+  TOUR_ROUTE,
+  TESTIMONIALS_ROUTE,
+  CONTACT_ROUTE,
+} from "./routes";
+
 export const NAV_ITEMS = [
-  {
-    id: 1,
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: 2,
-    title: "About",
-    url: "/about",
-  },
-  {
-    id: 3,
-    title: "Projects",
-    url: "/projects",
-  },
-  {
-    id: 4,
-    title: "Skills",
-    url: "/skills",
-  },
-  {
-    id: 5,
-    title: "Contact",
-    url: "/contact",
-  },
+  { id: 1, title: "Home", url: HOME_ROUTE },
+  { id: 2, title: "About", url: ABOUT_ROUTE },
+  { id: 3, title: "Tours", url: TOUR_ROUTE },
+  { id: 4, title: "Testimonials", url: TESTIMONIALS_ROUTE },
+  { id: 5, title: "Contact", url: CONTACT_ROUTE },
 ];
