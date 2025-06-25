@@ -13,7 +13,7 @@ export default function TestimonialsPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Traveler Testimonials</h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Don't just take my word for it - hear what my clients have to say
+            Donot just take my word for it - hear what my clients have to say
           </p>
           <div className="w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></div>
         </div>
