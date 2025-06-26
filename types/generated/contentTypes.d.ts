@@ -438,6 +438,40 @@ export interface ApiGalleryGallery extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTourTour extends Struct.CollectionTypeSchema {
+  collectionName: 'tours';
+  info: {
+    displayName: 'Tour';
+    pluralName: 'tours';
+    singularName: 'tour';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text & Schema.Attribute.Required;
+    Duration: Schema.Attribute.String;
+    Image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::tour.tour'> &
+      Schema.Attribute.Private;
+    Price: Schema.Attribute.Integer & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'Title'> & Schema.Attribute.Private;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -949,6 +983,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::blog.blog': ApiBlogBlog;
       'api::gallery.gallery': ApiGalleryGallery;
+      'api::tour.tour': ApiTourTour;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

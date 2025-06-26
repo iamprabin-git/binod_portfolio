@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tours",
+  "info": {
+    "singularName": "tour",
+    "pluralName": "tours",
+    "displayName": "Tour"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "private": true,
+      "targetField": "Title"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Duration": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "integer",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
